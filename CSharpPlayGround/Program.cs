@@ -52,17 +52,41 @@ Console.ReadLine();
 //-------------------------------------------------------------Arrays
 //a collection container of like variables
 /*
-int[] luckyNumbers = { 2, 4, 6, 8, 10 };
-luckyNumbers[2] = 900;
-string[] friends = new string[5];
-friends[0] = "Jim";
-friends[1] = "kelly";
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] luckyNumbers = { 2, 4, 6, 8, 10 };
+        luckyNumbers[2] = 900;
+        string[] friends = new string[5];
+        friends[0] = "Jim";
+        friends[1] = "kelly";
+        Console.WriteLine($"hey "+friends[0]+" your lucky number is: "+luckyNumbers[2]);
+    }
+}
 
-
-Console.WriteLine($"hey "+friends[0]+" your lucky number is: "+luckyNumbers[2]);
-
-Console.ReadLine();
-*/
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            int gameNum = 0;
+            string[] games = { "Alien Shooter", "Tic Tac Toe", "Snake", "Puzzle", "Football" };
+            Console.WriteLine("Welcome to the game store!");
+            Console.Write("Enter a game number: ");
+            gameNum = Convert.ToInt32(Console.ReadLine());
+            if(gameNum < games.Length)
+            {
+                   Console.WriteLine($"You chose {games[gameNum]}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid game number");
+            }
+          
+            Console.ReadLine();
+        }
+    }
+    */
 
 
 //-------------------------------------------------------------Methods
@@ -312,8 +336,97 @@ class Program
 }
 */
 
-//--------------------------------------------
+//--------------------------------------------for loop
+/*
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] nums = { 2, 4, 6, 8, 10, 20, 30, 40, 50, 100 };
+        
+        for (int i = 0; i < nums.Length; i++)
+        {
+            Console.WriteLine(nums[i]);
+        }
+        Console.ReadLine();
+    }
+}
+*/
 
+
+//--------------------------------------------Exponent calculator Function
+/*
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter your base number: ");
+        int baseNum = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter your power number: ");
+        int powerNum = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine($"The Exponent of {baseNum} , {powerNum} is: {GetPow(baseNum, powerNum)}");
+        Console.ReadLine();
+    }
+    static int GetPow(int baseNum, int powerNum)
+    {
+        int result = 1;
+        for (int i = 0; i < powerNum; i++)
+        {
+            result = result * baseNum;
+        }
+        return result;
+    }
+}
+*/
+//--------------------------------------------Social Network app
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter your Post: ");
+            string? postText = Console.ReadLine();
+
+            Post post = new Post();
+            post.Text = postText;
+            post.ShowPost();
+            Console.ReadLine();
+
+        }
+    }
+    class Post
+    {
+        private string? text;
+        
+        //write a constructor here
+        public Post()
+        {
+            text = "";
+        }
+
+        
+
+        public void ShowPost()
+        {
+            Console.WriteLine($"your new post reads: {text}");
+        }
+        
+        public string? Text
+        {
+            get
+            {
+                return text;
+            }
+            set
+            {
+                text = value;
+            }
+        }
+        //write a property for member text
+      
+    }
+  
 
 
 
