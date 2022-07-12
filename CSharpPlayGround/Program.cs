@@ -1,4 +1,4 @@
-﻿/* See https://aka.ms/new-console-template for more information
+/* See https://aka.ms/new-console-template for more information
 using System;
 
 namespace MyApp // Note: actual namespace depends on the project name.
@@ -381,32 +381,26 @@ class Program
 }
 */
 //--------------------------------------------Social Network app
+/*
  class Program
     {
         static void Main(string[] args)
         {
             Console.Write("Enter your Post: ");
             string? postText = Console.ReadLine();
-
             Post post = new Post();
             post.Text = postText;
             post.ShowPost();
             Console.ReadLine();
-
         }
     }
     class Post
     {
         private string? text;
-        
-        //write a constructor here
         public Post()
         {
             text = "";
         }
-
-        
-
         public void ShowPost()
         {
             Console.WriteLine($"your new post reads: {text}");
@@ -423,13 +417,185 @@ class Program
                 text = value;
             }
         }
-        //write a property for member text
-      
     }
-  
+*/
 
 
+//--------------------------------------------Arrays Grid element dimensions
+/*
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[,] numberGrid = {
+                                { 1, 2, 3 },
+                                { 4, 5, 6 },
+                                { 7, 8, 9 },
+                                { 0, 0, 0 }
+                            };
+                            //int [,] myArray = new int[3, 3];
+        Console.WriteLine(numberGrid[2, 2]);
+        Console.ReadLine();
+    }
+}
+*/
 
 
+//--------------------------------------------catching exceptions
+/*
+class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            Console.Write("Enter a number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"You entered {num}");
+        }
+        catch (FormatException fex)
+        {
+            Console.WriteLine("You did not enter a number");
+        }
+        catch (OverflowException oex)
+        {
+            Console.WriteLine("The number is too big");
+        }
+        finally
+        {
+            Console.WriteLine("Please press any key to exit");
+            Console.ReadLine();
+        }
+    }
+}
+*/
 
+//---------------------------classess && objects && constructors
+/*
+namespace CSharpPlayGround
+{
+    class Program //classess
+    {
+        static void Main(string[] args)
+        {
+            Book book1 = new Book("The C# Playground", "John Doe", 200); //constructors
+            // book1.Title = "The C# Playground"; //objects
+            // book1.Author = "John Doe";
+            // book1.Pages = 200;
+            Console.WriteLine($"{book1.Title} by {book1.Author} this book has {book1.Pages} pages");
+
+            Book book2 = new Book("The F# Playground", "Jane Doe", 201); //constructors
+            Console.WriteLine($"{book2.Title} by {book2.Author} this book has {book2.Pages} pages");
+            
+            Console.ReadLine();
+        }
+    }
+}
+*/
+
+//--------------------------------------------Object Methods
+/*
+namespace CSharpPlayGround
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string studentName = "";
+            double studentGPA = 0.0;
+            string studentMajor = "";
+
+            Console.WriteLine("Would you like to create a new student? (enter true or false)");
+            bool createNewStudent = Convert.ToBoolean(Console.ReadLine());
+
+            if (createNewStudent == true)
+            {
+                Student student1 = new Student(studentName, studentGPA, studentMajor);
+
+            }
+            else
+            {
+                Console.WriteLine("Exiting...");
+                return;
+            }
+            //still needs work lol should loop until user exits
+            Console.ReadLine();
+        }
+    }
+}  
+*/
+
+
+////--------------------------------------------Getters and Setters (accessors and mutators)
+/*
+namespace CSharpPlayGround
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Movie movie1 = new Movie("The Matrix", "Wachowski", "PG", "Action");
+            Console.WriteLine($"{movie1.name} is a {movie1.Rating} movie");
+            Console.ReadLine();
+        }
+       
+    }
+}
+*/
+
+
+////--------------------------------------------Inheritance
+/*
+using System;
+namespace CSharpPlayGround
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //increment song count
+            Song song1 = new Song("The Sign", "Ace of Base", 100);
+            Console.WriteLine("{0} by {1} has {2} minutes, this song has been played {3} times", song1.Title, song1.Artist, song1.Duration, Song.Count);
+            Song song2 = new Song("The Sign", "Ace of Base", 100);
+            Console.WriteLine("{0} by {1} has {2} minutes, this song has been played {3} times", song1.Title, song1.Artist, song1.Duration, Song.Count);
+            Console.ReadLine();
+        }
+    }
+}
+*/
+
+////--------------------------------Static method and classess + Inheritance
+/*
+using System;
+namespace CSharpPlayGround
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           UsefulTools.SayHi("Rafael");
+            Console.ReadLine();
+        }
+    }
+}
+*/
+
+
+////--------------------------------------------Inheritance
+using System;
+namespace CSharpPlayGround //Chef.cs ItalianChef.cs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Chef chef = new Chef();
+            chef.MakeSpecialDish();
+            ItalianChef italianChef = new ItalianChef();
+            italianChef.MakeSpecialDish(); //overrides the method in the base class
+            Console.ReadLine();
+
+        }
+    }
+}
 
