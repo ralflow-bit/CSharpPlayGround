@@ -1,6 +1,12 @@
-/* See https://aka.ms/new-console-template for more information
-using System;
+/* Hello and welcome to my C# for beginners note book. As you scroll 
+ * down each section holds a code snippet which progessively becomes more involved.
+ just toggle each comment line to activate.
+ * I will end this Console app with a active program which encompasses 
+ * all my code snippets (scroll to end), run the app to test. Good Luck I hope this helps.
 
+
+////----------------------------------------------------Template
+/* 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
@@ -14,7 +20,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
  */
 
 
-//----------------------------------------------------Calculator
+////----------------------------------------------------Calculator
 /*
 Console.Write("Enter a Number: ");
 double num1 = Convert.ToDouble(Console.ReadLine());
@@ -27,7 +33,7 @@ Console.ReadLine();
 */
 
 
-//--------------------------------------------------BuildMadLibsGame
+////--------------------------------------------------BuildMadLibsGame
 /*
 string color, noun, celebrity;
 
@@ -49,7 +55,7 @@ Console.ReadLine();
 */
 
 
-//-------------------------------------------------------------Arrays
+////-------------------------------------------------------------Arrays
 //a collection container of like variables
 /*
 class Program
@@ -64,7 +70,7 @@ class Program
         Console.WriteLine($"hey "+friends[0]+" your lucky number is: "+luckyNumbers[2]);
     }
 }
-
+//another array program
  class Program
     {
         static void Main(string[] args)
@@ -89,7 +95,7 @@ class Program
     */
 
 
-//-------------------------------------------------------------Methods
+////-------------------------------------------------------------Methods
 //reusable code you can call on with return values
 /*
 class Program
@@ -137,7 +143,7 @@ class Program
 */
 
 
-//-------------------------------------------------if statements
+////-------------------------------------------------if statements
 /*
 class Program
 {
@@ -171,7 +177,7 @@ class Program
 */
 
 
-//----------------------------------------------more if (compare method)
+////----------------------------------------------more if (compare method)
 /*
 class Program
 {
@@ -208,7 +214,7 @@ class Program
 */
 
 
-//-------------------------------------------better calculator with if
+////-------------------------------------------better calculator with if
 /*
 class Program
 {
@@ -253,7 +259,7 @@ class Program
 */
 
 
-//-------------------------------Using switch statements instead of if
+////-------------------------------Using switch statements instead of if
 /*
 class Program
 {
@@ -300,7 +306,7 @@ class Program
 */
 
 
-//---------------------------------------while loops guessing game
+////---------------------------------------while loops guessing game
 /*
 class Program
 {
@@ -336,7 +342,7 @@ class Program
 }
 */
 
-//--------------------------------------------for loop
+////--------------------------------------------for loop
 /*
 class Program
 {
@@ -354,7 +360,7 @@ class Program
 */
 
 
-//--------------------------------------------Exponent calculator Function
+////--------------------------------------------Exponent calculator Function
 /*
 class Program
 {
@@ -380,7 +386,7 @@ class Program
     }
 }
 */
-//--------------------------------------------Social Network app
+////--------------------------------------------Social Network app
 /*
  class Program
     {
@@ -421,7 +427,7 @@ class Program
 */
 
 
-//--------------------------------------------Arrays Grid element dimensions
+////--------------------------------------------Arrays Grid element dimensions
 /*
 class Program
 {
@@ -441,7 +447,7 @@ class Program
 */
 
 
-//--------------------------------------------catching exceptions
+////--------------------------------------------catching exceptions
 /*
 class Program
 {
@@ -470,7 +476,7 @@ class Program
 }
 */
 
-//---------------------------classess && objects && constructors
+////---------------------------classess && objects && constructors
 /*
 namespace CSharpPlayGround
 {
@@ -493,7 +499,7 @@ namespace CSharpPlayGround
 }
 */
 
-//--------------------------------------------Object Methods
+////--------------------------------------------Object Methods
 /*
 namespace CSharpPlayGround
 {
@@ -582,6 +588,7 @@ namespace CSharpPlayGround
 
 
 ////--------------------------------------------Inheritance
+/*
 using System;
 namespace CSharpPlayGround //Chef.cs ItalianChef.cs
 {
@@ -598,4 +605,29 @@ namespace CSharpPlayGround //Chef.cs ItalianChef.cs
         }
     }
 }
+*/
+
+using System;
+namespace CSharpPlayGround
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string? studentName = "";
+            int studentDob = 0;
+            string prefIDE = "";
+            double rateThisCourse = 0;
+            string name = "";
+
+            studentName = name;
+
+            UsefulTools.SayWelcome();
+            NewStudent student1 = new NewStudent(studentName, studentDob, prefIDE, rateThisCourse);
+            UsefulTools.SayBye(name);
+        }
+    }
+}
+
+
 
